@@ -1,0 +1,8 @@
+pypdf
+langchain-openai
+langchain-community
+faiss-cpu
+langchain
+openai
+OpenAI
+streamlit==1.48.0
