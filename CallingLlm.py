@@ -13,7 +13,9 @@ def calling_llm(vectorstore,question):
     prompt = ChatPromptTemplate.from_messages(
         [
         """
-        Answer the questions based on the provided context
+        Answer the questions based on the provided context try to be funny while answering the questions
+        try to make some examples from real world for explaining the concepts well and do not provide the entire context if only partial information from the context is requested.
+        
         
         <context>
         {context}

@@ -107,7 +107,7 @@ def main():
 
     # ---------- render greeting ----------
     if st.session_state.greet_done and st.session_state.greet_text:
-        st.info(st.session_state.greet_text)
+        #st.info(st.session_state.greet_text)
         if st.session_state.greet_audio:
             autoplay_audio(st.session_state.greet_audio, mime="audio/mp3")
             st.session_state.audio_play = True
@@ -131,6 +131,7 @@ def main():
         st.session_state.answer_generated = True
     if st.session_state.answer_generated:
         audio_bytes = tts_synthesize(answer)
+        st.markdown(f"**Response** {answer}")
         autoplay_audio(audio_bytes, mime="audio/mp3")
 
 
